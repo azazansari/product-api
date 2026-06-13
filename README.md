@@ -1,19 +1,14 @@
-# Product API - CRUD Application
+# Product API
 
-## Overview
+This is a simple CRUD API built using Node.js, Express.js, and MongoDB.
 
-This project is a RESTful API built using Node.js, Express.js, MongoDB, and Mongoose. It allows users to perform CRUD (Create, Read, Update, Delete) operations on products.
+The API allows users to:
 
-## Features
-
-* Create Product
-* Get All Products
-* Get Product By ID
-* Update Product
-* Delete Product
-* Input Validation using Express Validator
-* Error Handling Middleware
-* MongoDB Atlas Integration
+* Create a product
+* View all products
+* View a single product
+* Update a product
+* Delete a product
 
 ## Technologies Used
 
@@ -22,65 +17,42 @@ This project is a RESTful API built using Node.js, Express.js, MongoDB, and Mong
 * MongoDB Atlas
 * Mongoose
 * Express Validator
-* Dotenv
 
-## Project Structure
+## Setup Instructions
 
-```text
-product-api/
-│
-├── server.js
-├── .env
-├── .gitignore
-├── package.json
-│
-├── models/
-│   └── Product.js
-│
-├── controllers/
-│   └── productController.js
-│
-├── routes/
-│   └── productRoutes.js
-│
-└── middleware/
-    └── errorHandler.js
-```
-
-## Installation
-
-### Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd product-api
 ```
 
-### Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Configure Environment Variables
+### 3. Create a .env File
 
-Create a `.env` file in the root directory:
+Add the following:
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
 
-### Run the Server
+### 4. Run the Project
 
 ```bash
 node server.js
 ```
 
-Server will start on:
+If everything is configured correctly, you should see:
 
 ```text
-http://localhost:5000
+MongoDB Connected
+Server running on port 5000
 ```
 
 ## API Endpoints
@@ -89,16 +61,6 @@ http://localhost:5000
 
 ```http
 POST /products
-```
-
-Request Body:
-
-```json
-{
-  "name": "Laptop",
-  "price": 50000,
-  "description": "Gaming Laptop"
-}
 ```
 
 ### Get All Products
@@ -127,13 +89,9 @@ DELETE /products/:id
 
 ## Validation
 
-The API validates:
-
 * Product name is required.
-* Product price must be numeric.
+* Product price must be a number.
 
-## Error Handling
+## Author
 
-Centralized error handling middleware is implemented to return appropriate error responses.
-
-
+Azaz Ansari
